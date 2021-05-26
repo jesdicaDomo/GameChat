@@ -1,8 +1,5 @@
-# TimeCommander
-#
-# Command: Command to execute
-# Time: Amount of time in ticks until command is executed
+# ปรีบระยะเวลาของคำถาม 1200 = 1 นาที
 
 Commands:
   - Command:
-    Time: 600
+    Time: 1200
