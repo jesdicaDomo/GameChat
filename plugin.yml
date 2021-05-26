@@ -1,0 +1,9 @@
+name: game
+main: game\Main
+load: STARTUP
+version: 1.0.2
+api: 3.0.2
+author: JessicaDomo
+commands:
+    game:
+      description: game
