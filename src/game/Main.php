@@ -235,32 +235,32 @@ class Main extends PluginBase implements Listener
           switch (mt_rand(1, 5)) {
             case 1:
 
-              $playere->getInventory()->addItem(Item::get(ITEM::DIAMOND, 0, 1, "§3Алмаз"));
-              $sender->sendMessage("§7(§aเกมส์ตอบคำถาม§7) §aПоздравляем§7! §aВы выиграли в §fчат игре §aи получили$f:§3 Алмаз");
+              $playere->getInventory()->addItem(Item::get(ITEM::DIAMOND, 0, 1, "เพรข"));
+              $sender->sendMessage("§7(§aเกมส์ตอบคำถาม§7) แลกไอเทมเเล้ว");
 
               break;
             case 2:
 
-              $playere->getInventory()->addItem(Item::get(ITEM::IRON_BOOTS, 0, 1, "§7Железные ботинки"));
-              $sender->sendMessage("§7(§aเกมส์ตอบคำถาม§7) §aПоздравляем§7! §aВы выиграли в §fчат игре §aи получили$f:§7 Железные ботинки");
+              $playere->getInventory()->addItem(Item::get(ITEM::IRON_BOOTS, 0, 1, "รองเท้าเหล็ก"));
+              $sender->sendMessage("§7(§aเกมส์ตอบคำถาม§7) แลกไอเทมเเล้ว");
               break;
 
             case 3:
 
-              $playere->getInventory()->addItem(Item::get(ITEM::STEAK, 0, 2, "§eСтейк"));
-              $sender->sendMessage("§7(§aเกมส์ตอบคำถาม§7) §aПоздравляем§7! §aВы выиграли в §fчат игре §aи получили$f2 :§e Стейка");
+              $playere->getInventory()->addItem(Item::get(ITEM::STEAK, 0, 2, "เนื้อวัว"));
+              $sender->sendMessage("§7(§aเกมส์ตอบคำถาม§7) แลกไอเทมเเล้ว");
               break;
 
             case 4:
 
-              $playere->getInventory()->addItem(Item::get(ITEM::EMERALD, 0, 1, "§aИзумруд"));
-              $sender->sendMessage("§7(§aเกมส์ตอบคำถาม§7) §aПоздравляем§7! §aВы выиграли в §fчат игре §aи получили$f :§a Изумруд");
+              $playere->getInventory()->addItem(Item::get(ITEM::EMERALD, 0, 1, "มรกต"));
+              $sender->sendMessage("§7(§aเกมส์ตอบคำถาม§7) แลกไอเทมเเล้ว");
               break;
 
             case 5:
 
-              $playere->getInventory()->addItem(Item::get(ITEM::EMERALD, 0, 1, "§aИзумруд"));
-              $sender->sendMessage("§7(§aเกมส์ตอบคำถาม§7) §aПоздравляем§7! §aВы выиграли в §fчат игре §aи получили$f :§a Изумруд");
+              $playere->getInventory()->addItem(Item::get(ITEM::EMERALD, 0, 1, "มรกต"));
+              $sender->sendMessage("§7(§aเกมส์ตอบคำถาม§7) แลกไอเทมเเล้ว");
               break;
           }
         }
