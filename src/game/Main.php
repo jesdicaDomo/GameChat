@@ -117,25 +117,7 @@ class Main extends PluginBase implements Listener
           break;
 
         case "4";
-          $name = $sender->getName();
-          $Game = ('Game');
-          $kdata = new Config($this->getDataFolder() . "data/" . strtolower($Game) . ".yml", Config::YAML);
-          $swallet = $kdata->getAll();
-          $c = count($swallet);
-          $message = "";
-          $top = "§l§4〤§b[§5ˇωˇ§b]§r§6 Game§f เช็คอันดับคะแนน §l§b[§5ˇωˇ§b]§4〤§r";
-          arsort($swallet);
-          $i = 1;
-          foreach ($swallet as $name => $amount) {
-
-            $message .= "§b " . $i . ". §7" . $name . "  §cＧ§6a§em§ae  §f" . $amount . " §aคะแนน§r\n";
-            if ($i > 14) {
-              break;
-            }
-            ++$i;
-          }
-
-          $sender->sendMessage("$top\n$message");
+          $this->Topform($sender);
           break;
       }
     });
@@ -150,6 +132,52 @@ class Main extends PluginBase implements Listener
     return $form;
   }
 
+  public function Topform($sender)
+  {
+    $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
+    $form = $api->createSimpleForm(function (Player $sender, $data) {
+      $name = $sender->getName();
+      $Game = ('Game');
+      $kdata = new Config($this->getDataFolder() . "data/" . strtolower($Game) . ".yml", Config::YAML);
+      $swallet = $kdata->getAll();
+      $c = count($swallet);
+      $message = "";
+      $top = "§l§4〤§b[§5ˇωˇ§b]§r§6 Game§f เช็คอันดับคะแนน §l§b[§5ˇωˇ§b]§4〤§r";
+      arsort($swallet);
+      $i = 1;
+      foreach ($swallet as $name => $amount) {
+
+        $message .= "§b " . $i . ". §7" . $name . "  §cＧ§6a§em§ae  §f" . $amount . " §aคะแนน§r\n";
+      }
+      switch ($data) {
+        case 0:
+          if ($i > 14) {
+            break;
+          }
+
+          ++$i;
+          $this->Formgame($sender);
+          break;
+      }
+    });
+    $name = $sender->getName();
+    $Game = ('Game');
+    $kdata = new Config($this->getDataFolder() . "data/" . strtolower($Game) . ".yml", Config::YAML);
+    $swallet = $kdata->getAll();
+    $c = count($swallet);
+    $message = "";
+    $top = "§l§4〤§b[§5ˇωˇ§b]§r§6 Game§f เช็คอันดับคะแนน §l§b[§5ˇωˇ§b]§4〤§r";
+    arsort($swallet);
+    $i = 1;
+    foreach ($swallet as $name => $amount) {
+
+      $message .= "§b " . $i . ". §7" . $name . "  §cＧ§6a§em§ae  §f" . $amount . " §aคะแนน§r\n";
+    }
+    $form->setTitle("§l§4〤§b[§5ˇωˇ§b]§r§6 Game§f อันดับคะแนน §l§b[§5ˇωˇ§b]§4〤§r");
+    $form->setContent($top . "\n" . $message);
+    $form->addButton("กลับ");
+    $form->sendToPlayer($sender);
+  }
 
   public function Formyou(Player $sender)
   {
