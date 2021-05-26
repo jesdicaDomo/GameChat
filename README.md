@@ -1,5 +1,5 @@
 # GameChat
- ## GameChat ##
+
  Command /game
 
  สิ่งที่ต้องใช้ร่วมด้วย
