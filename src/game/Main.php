@@ -178,7 +178,7 @@ class Main extends PluginBase implements Listener
     @mkdir($this->getDataFolder() . "data/");
     $max = $this->getConfig()->get("max");
     $min = $this->getConfig()->get("min");
-    $characters = ('0123456789abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    $characters = ('0123456789abcdefghijklmnopqrstuvxyz');
     $charactersLength = strlen($characters);
     $length = (5);
     $randomString = '';
